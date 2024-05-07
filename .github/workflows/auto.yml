@@ -20,6 +20,7 @@ jobs:
           
       - name: Commit changes
         run: |
+          git config --local user.email "ari.ardianto@students.amikom.ac.id"
           git config --local user.name "aarzaary"
           git add -A
           
