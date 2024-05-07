@@ -1,6 +1,13 @@
 name: Auto commit
 
-on: workflow_dispatch
+on:
+
+  push:
+    branches:
+      - master
+      
+  schedule:
+  - cron: "* * * * *"                                               
 
 jobs:
   auto_commit:
@@ -24,7 +31,7 @@ jobs:
           git config --local user.name "aarzaary"
           git add -A
           
-          d=`date '+%Y-%m-%dT%H:%M:%SZ'`
+          d=`date '+%Y-%m-%d %H:%M:%S'`
                     
           git commit -m "Auto commit at $d"
           
