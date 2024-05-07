@@ -1,13 +1,10 @@
 name: Auto commit
 
-on:
+on: workflow_dispatch
 
   push:
     branches:
       - master
-      
-  schedule:
-  - cron: "*/5 * * * *"
 
 jobs:
   auto_commit:
