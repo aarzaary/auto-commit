@@ -11,13 +11,13 @@ on:
 
 jobs:
   auto_commit:
-    runs:
-    using: 'node20'
+    runs-on: ubuntu-latest
     steps:
       - name: DEBUG 
         run: echo "::debug::Ref = ${{github.ref}}"
-      - uses: actions/checkout@v3      
+      - uses: actions/checkout@v4
         with:
+         node-version: '20.x'
          persist-credentials: false
          fetch-depth: 0
 
