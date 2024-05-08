@@ -12,6 +12,7 @@ on:
 jobs:
   auto_commit:
     runs-on: ubuntu-latest
+    using: 'node20'
     steps:
       - name: DEBUG 
         run: echo "::debug::Ref = ${{github.ref}}"
